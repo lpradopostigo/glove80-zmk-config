@@ -110,12 +110,12 @@
 
         default_layer {
             bindings = <
-            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                               &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-            &kp F11        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                         &kp N6    &kp N7  &kp N8      &kp N9      &kp N0      &kp F12
-            &kp F12        &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                        &kp SEMI  &kp L   &kp D       &kp W       &kp V       &kp Z
-            &kp GRAVE      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                      &kp DOT   &kp H   &kp T       &kp S       &kp N       &kp Q
-            &kp HOME       &kp G    &kp X       &kp J       &kp K       &kp MINUS   &ssk LSHFT  &ssk LCTRL  &ssk LALT &ssk RALT &ssk RCTRL &ssk RSHFT  &kp FSLH  &kp R   &kp M       &kp F       &kp P       &kp END
-            &magic MAGIC 0 &kp BSLH &kp EQUAL   &kp LEFT    &kp RIGHT               &kp BSPC    &kp DEL     &kp ESC   &kp TAB   &kp RET    &kp SPACE             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                                                                 &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
+            &kp F11        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7      &kp N8      &kp N9      &kp N0      &kp F12
+            &kp F12        &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V       &kp Z
+            &kp GRAVE      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N       &kp Q
+            &kp HOME       &kp G    &kp X       &kp J       &kp K       &kp MINUS   &ssk LSHFT LSHFT  &ssk LCTRL LCTRL  &ssk LALT LALT &ssk RALT RALT &ssk RCTRL RCTRL &ssk RSHFT RSHFT  &kp FSLH  &kp R       &kp M       &kp F       &kp P       &kp END
+            &magic MAGIC 0 &kp BSLH &kp EQUAL   &kp LEFT    &kp RIGHT               &kp BSPC          &kp DEL           &kp ESC        &kp TAB        &kp RET          &kp SPACE         &kp UP    &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
