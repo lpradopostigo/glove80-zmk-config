@@ -118,11 +118,11 @@
         default_layer {
             bindings = <
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                                                                 &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
-            &kp F11        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7      &kp N8      &kp N9      &kp N0      &kp F12
+            &kp F11        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7      &kp N8      &kp N9      &kp N0      &kp CAPSLOCK
             &kp F12        &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V       &kp Z
             &kp GRAVE      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N       &kp Q
-            &kp HOME       &kp G    &kp X       &kp J       &kp K       &kp MINUS   &smart_lshift     &ssk LCTRL LCTRL  &ssk LALT LALT &ssk RALT RALT &ssk RCTRL RCTRL &smart_rshift     &kp FSLH  &kp R       &kp M       &kp F       &kp P       &kp END
-            &magic MAGIC 0 &kp BSLH &kp EQUAL   &kp LEFT    &kp RIGHT               &kp BSPC          &kp DEL           &kp ESC        &kp TAB        &kp RET          &kp SPACE         &kp UP    &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp HOME       &kp G    &kp X       &kp J       &kp K       &kp MINUS   &kp DEL           &ssk LCTRL LCTRL  &ssk LALT LALT &ssk RALT RALT &ssk RCTRL RCTRL &kp ESC           &kp FSLH  &kp R       &kp M       &kp F       &kp P       &kp END
+            &magic MAGIC 0 &kp BSLH &kp EQUAL   &kp LEFT    &kp RIGHT               &kp BSPC          &smart_lshift     &kp ENTER      &kp TAB        &smart_rshift    &kp SPACE         &kp UP    &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
