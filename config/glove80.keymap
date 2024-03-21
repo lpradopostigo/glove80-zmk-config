@@ -64,6 +64,14 @@
             bindings = <&ssk RSHFT RSHFT>, <&kp LGUI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        hm: hold_modifier {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <200>;                      
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     macros {
@@ -122,7 +130,7 @@
             &kp F12        &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V       &kp Z
             &kp GRAVE      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N       &kp Q
             &kp HOME       &kp G    &kp X       &kp J       &kp K       &kp MINUS   &kp DEL           &ssk LCTRL LCTRL  &ssk LALT LALT &ssk RALT RALT &ssk RCTRL RCTRL &kp ESC           &kp FSLH  &kp R       &kp M       &kp F       &kp P       &kp END
-            &magic MAGIC 0 &kp BSLH &kp EQUAL   &kp LEFT    &kp RIGHT               &kp BSPC          &smart_lshift     &kp ENTER      &kp TAB        &smart_rshift    &kp SPACE         &kp UP    &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &magic MAGIC 0 &kp BSLH &kp EQUAL   &kp LEFT    &kp RIGHT               &hm LSHIFT BSPC   &kp DEL           &kp  ESC       &kp TAB        &kp ENTER        &hm RSHIFT SPACE  &kp UP    &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
