@@ -65,10 +65,10 @@
         };
 
         smart_lctrl: smart_lctrl {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&ssk LCTRL LCTRL>, <&kp LGUI>;
+            bindings = <&ssk LCTRL LCTRL>, <&kp LG(S)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         smart_rctrl: smart_rctrl {
