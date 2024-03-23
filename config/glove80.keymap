@@ -40,15 +40,10 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
-        smart_caps: smart_caps {
-            compatible = "zmk,behavior-caps-word";
-            #binding-cells = <0>;
-            continue-list = <UNDERSCORE MINUS>;
-        };
+        // custom behaviors
 
         ssk: smart_sticky_key {
             compatible = "zmk,behavior-hold-tap";
-            label = "SMART_STICKY_KEY";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -57,18 +52,30 @@
 
         smart_lshft: smart_lshft {
             compatible = "zmk,behavior-mod-morph";
-            label = "SMART_LSHFT";
             #binding-cells = <0>;
-            bindings = <&ssk LSHFT LSHFT>, <&smart_caps>;
+            bindings = <&ssk LSHFT LSHFT>, <&kp CAPSLOCK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         smart_rshft: smart_rshft {
             compatible = "zmk,behavior-mod-morph";
-            label = "SMART_RSHFT";
             #binding-cells = <0>;
-            bindings = <&ssk RSHFT RSHFT>, <&smart_caps>;
+            bindings = <&ssk RSHFT RSHFT>, <&kp CAPSLOCK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        smart_lctrl: smart_lctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ssk LCTRL LCTRL>, <&kp LGUI>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        smart_rctrl: smart_rctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ssk RCTRL RCTRL>, <&kp LGUI>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -127,8 +134,8 @@
             &kp LBKT       &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7      &kp N8      &kp N9      &kp N0         &kp RBKT
             &kp BSLH       &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V          &kp Z
             &kp EQUAL      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N          &kp Q
-            &kp GRAVE      &kp G    &kp X       &kp J       &kp K       &kp MINUS   &sk LCTRL         &sk LALT          &sk ESC           &kp LGUI        &sk RALT     &sk RCTRL         &kp FSLH  &kp R       &kp M       &kp F       &kp P          &kp F11
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT               &kp BSPC          &smart_lshft      &kp TAB           &kp ENTER       &smart_rshft &kp SPACE                   &kp UP      &kp DOWN    &kp PAGE_UP &kp PAGE_DOWN  &kp F12
+            &kp GRAVE      &kp G    &kp X       &kp J       &kp K       &kp MINUS   &smart_lctrl      &sk LALT          &sk ESC           &kp TAB         &sk RALT     &smart_rctrl      &kp FSLH  &kp R       &kp M       &kp F       &kp P          &kp F11
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT               &kp BSPC          &smart_lshft      &kp DELETE        &kp ENTER       &smart_rshft &kp SPACE                   &kp UP      &kp DOWN    &kp PAGE_UP &kp PAGE_DOWN  &kp F12
             >;
         };
 
