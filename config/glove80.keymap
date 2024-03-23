@@ -67,7 +67,7 @@
         smart_lctrl: smart_lctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk LCTRL LCTRL>, <&kp LGUI>;
+            bindings = <&sk LCTRL>, <&kp LGUI>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
