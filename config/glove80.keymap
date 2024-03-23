@@ -43,16 +43,25 @@
         ssk: smart_sticky_key {
             compatible = "zmk,behavior-hold-tap";
             label = "SMART_STICKY_KEY";
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp 0>, <&sk 0>;
+            bindings = <&kp>, <&sk>;
         };
 
-        smart_shift: smart_shift {
+        smart_lshft: smart_lshft {
             compatible = "zmk,behavior-mod-morph";
-            label = "SMART_LSHIFT";
+            label = "SMART_LSHFT";
             #binding-cells = <0>;
-            bindings = <&ssk LSHFT LSHFT>, <&ssk RALT RALT>;
+            bindings = <&ssk LSHFT LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        smart_rshft: smart_rshft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_RSHFT";
+            #binding-cells = <0>;
+            bindings = <&ssk RSHFT RSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -113,7 +122,7 @@
             &kp BSLH       &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V          &kp Z
             &kp EQUAL      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N          &kp Q
             &kp GRAVE      &kp G    &kp X       &kp J       &kp K       &kp MINUS   &sk LCTRL         &sk LALT          &sk ESC           &kp LGUI        &sk RALT     &sk RCTRL         &kp FSLH  &kp R       &kp M       &kp F       &kp P          &kp F11
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT               &kp BSPC          &ssk LSHFT        &kp TAB           &kp ENTER       &ssk RSHFT   &kp SPACE                   &kp UP      &kp DOWN    &kp PAGE_UP &kp PAGE_DOWN  &kp F12
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT               &kp BSPC          &smart_lshft      &kp TAB           &kp ENTER       &smart_rshft &kp SPACE                   &kp UP      &kp DOWN    &kp PAGE_UP &kp PAGE_DOWN  &kp F12
             >;
         };
 
