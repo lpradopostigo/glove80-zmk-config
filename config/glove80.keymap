@@ -40,6 +40,12 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
+        smart_caps: smart_caps {
+            compatible = "zmk,behavior-caps-word";
+            #binding-cells = <0>;
+            continue-list = <UNDERSCORE MINUS>;
+        };
+
         ssk: smart_sticky_key {
             compatible = "zmk,behavior-hold-tap";
             label = "SMART_STICKY_KEY";
@@ -53,7 +59,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_LSHFT";
             #binding-cells = <0>;
-            bindings = <&ssk LSHFT LSHFT>, <&caps_word>;
+            bindings = <&ssk LSHFT LSHFT>, <&smart_caps>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -61,7 +67,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_RSHFT";
             #binding-cells = <0>;
-            bindings = <&ssk RSHFT RSHFT>, <&caps_word>;
+            bindings = <&ssk RSHFT RSHFT>, <&smart_caps>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
