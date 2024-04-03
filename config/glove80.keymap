@@ -130,12 +130,12 @@
 
         default_layer {
             bindings = <
-            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                                                                 &kp F6      &kp F7      &kp F8      &kp F9         &kp F10
-            &kp LBKT       &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7      &kp N8      &kp N9      &kp N0         &kp RBKT
-            &kp BSLH       &kp B    &kp Y       &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V          &kp Z
-            &kp EQUAL      &kp C    &kp I       &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N          &kp Q
-            &kp GRAVE      &kp G    &kp X       &kp J       &kp K       &kp MINUS   &smart_lctrl      &sk LALT          &kp DELETE        &kp TAB         &sk RALT     &smart_rctrl      &kp FSLH  &kp R       &kp M       &kp F       &kp P          &kp F11
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT               &kp BSPC          &smart_lshft      &kp ESCAPE        &kp ENTER       &smart_rshft &kp SPACE                   &kp UP      &kp DOWN    &kp PAGE_UP &kp PAGE_DOWN  &kp F12
+            &kp F1         &kp F2        &kp F3        &kp F4      &kp F5                                                                                                                                 &kp F6      &kp F7      &kp F8      &kp F9         &kp F10
+            &kp LBKT       &kp N1        &kp N2        &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7      &kp N8      &kp N9      &kp N0         &kp RBKT
+            &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L       &kp D       &kp W       &kp V          &kp Z
+            &kp EQUAL      &kp C         &kp I         &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H       &kp T       &kp S       &kp N          &kp Q
+            &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &smart_lshft      &smart_lctrl      &sk RALT        &sk RALT        &smart_rctrl    &smart_rshft     &kp FSLH  &kp R       &kp M       &kp F       &kp P          &kp F11
+            &magic MAGIC 0 &kp PAGE_DOWN &kp PAGE_UP   &kp DOWN    &kp UP                  &kp BSPC          &key_repeat       &kp ESCAPE      &kp TAB         &kp ENTER       &kp SPACE                  &kp LEFT    &kp RIGHT   &kp HOME    &kp END        &kp F12
             >;
         };
 
