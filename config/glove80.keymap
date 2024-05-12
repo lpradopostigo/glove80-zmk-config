@@ -50,54 +50,28 @@
             bindings = <&kp>, <&sk>;
         };
 
-        smart_lshft: smart_lshft {
+        smart_shft: smart_shft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ssk LSHFT LSHFT>, <&ssk LC(LSHFT) LC(LSHFT)>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT|MOD_LCTL)>;
-
         };
 
-        smart_rshft: smart_rshft {
+        smart_ctrl: smart_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk RSHFT RSHFT>, <&ssk RCTRL RCTRL>;
-            mods = <(MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
-
-        smart_lctrl: smart_lctrl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ssk LCTRL LCTRL>, <&ssk LALT LALT>;
+            bindings = <&ssk LCTRL LCTRL>, <&ssk LC(LALT) LC(LALT)>;
             mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT)>;
         };
 
-        smart_rctrl: smart_rctrl {
+        smart_alt: smart_alt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk RCTRL RCTRL>, <&ssk LALT LALT>;
-            mods = <(MOD_RCTL)>;
-            keep-mods = <(MOD_RCTL)>;
-        };
-
-        
-        smart_lalt: smart_lalt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ssk LALT LALT>, <&ssk LSHFT LSHFT>;
+            bindings = <&ssk LALT LALT>, <&ssk LA(LSHFT) LA(LSHFT)>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
-        };
-
-        smart_ralt: smart_ralt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ssk LALT LALT>, <&ssk RSHFT RSHFT>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT|MOD_LSFT)>;
         };
     };
 
@@ -156,7 +130,7 @@
             &kp LBKT       &kp N1        &kp N2        &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7       &kp N8      &kp N9       &kp N0         &kp RBKT
             &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L        &kp D       &kp W        &kp V          &kp Z
             &kp EQUAL      &kp C         &kp I         &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H        &kp T       &kp S        &kp N          &kp Q
-            &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &smart_lshft      &smart_lctrl    &smart_lalt   &smart_ralt     &smart_rctrl    &smart_rshft         &kp FSLH  &kp R        &kp M       &kp F        &kp P          &kp LGUI
+            &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &smart_shft       &smart_ctrl     &smart_alt    &smart_alt      &smart_ctrl     &smart_shft          &kp FSLH  &kp R        &kp M       &kp F        &kp P          &kp LGUI
             &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT    &kp RIGHT               &kp BSPC          &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &kp SPACE                      &kp UP       &kp DOWN    &kp PAGE_UP  &kp PAGE_DOWN  &kp F12
             >;
         };
