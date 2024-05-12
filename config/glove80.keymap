@@ -61,37 +61,42 @@
         smart_rshft: smart_rshft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk RSHFT RSHFT>, <&ssk LC(RSHFT) LC(RSHFT)>;
+            bindings = <&ssk RSHFT RSHFT>, <&ssk RCTRL RCTRL>;
             mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         smart_lctrl: smart_lctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk LCTRL LCTRL>, <&ssk LC(LALT) LC(LALT)>;
+            bindings = <&ssk LCTRL LCTRL>, <&ssk LALT LALT>;
             mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         smart_rctrl: smart_rctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk RCTRL RCTRL>, <&ssk LC(LALT) LC(LALT)>;
+            bindings = <&ssk RCTRL RCTRL>, <&ssk LALT LALT>;
             mods = <(MOD_RCTL)>;
+            keep-mods = <(MOD_RCTL)>;
         };
 
         
         smart_lalt: smart_lalt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk LALT LALT>, <&ssk LS(LALT) LA(LSHFT)>;
+            bindings = <&ssk LALT LALT>, <&ssk LSHFT LSHFT>;
             mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
         };
 
         smart_ralt: smart_ralt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk LALT LALT>, <&ssk LA(LSHFT) LA(LSHFT)>;
+            bindings = <&ssk LALT LALT>, <&ssk RSHFT RSHFT>;
             mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
         };
     };
 
