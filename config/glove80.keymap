@@ -55,6 +55,8 @@
             #binding-cells = <0>;
             bindings = <&ssk LSHFT LSHFT>, <&sk LC(LSHFT)>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_LCTL)>;
+
         };
 
         smart_rshft: smart_rshft {
