@@ -53,7 +53,7 @@
         smart_lshft: smart_lshft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ssk LSHFT LSHFT>, <&sk LC(LSHFT)>;
+            bindings = <&ssk LSHFT LSHFT>, <&ssk LC(LSHFT) LC(LSHFT)>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT|MOD_LCTL)>;
 
