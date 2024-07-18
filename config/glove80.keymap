@@ -137,12 +137,12 @@
 
         command_layer {
             bindings = <
-            &kp LC(Y)      &kp LC(Z)     &kp LC(X)     &kp LC(C)             &kp LC(V)                                                                                                                                  &kp LG(S)    &key_repeat     &kp CAPSLOCK &kp F9         &kp F10
-            &kp LBKT       &kp N1        &kp N2        &kp N3                &kp N4          &kp N5                                                                                                           &kp N6    &kp N7       &kp N8          &kp N9       &kp N0         &kp RBKT
-            &kp BSLH       &kp B         &kp Y         &kp LC(BACKSPACE)     &kp LC(DELETE)  &kp SQT                                                                                                          &kp SEMI  &kp L        &kp LC(LEFT)    &kp UP       &kp LC(RIGHT)  &kp Z
-            &kp EQUAL      &kp C         &kp I         &kp BACKSPACE         &kp DELETE      &kp COMMA                                                                                                        &kp DOT   &kp HOME     &kp LEFT        &kp DOWN     &kp RIGHT      &kp END
-            &kp GRAVE      &kp G         &kp X         &kp LC(C)             &kp K           &kp MINUS   &smart_shft       &smart_ctrl     &smart_alt    &smart_alt      &smart_ctrl     &smart_shft          &kp FSLH  &kp R        &kp M           &kp F        &kp P          &kp LGUI
-            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT              &kp RIGHT                   &kp BACKSPACE     &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &to 0                          &kp UP       &kp DOWN        &kp PAGE_UP  &kp PAGE_DOWN  &kp F12
+            &kp LC(Y)      &kp LC(Z)     &kp LC(X)     &kp LC(C)             &kp LC(V)                                                                                                                                  &kp LG(S)    &key_repeat     &kp CAPSLOCK  &kp F9         &kp F10
+            &kp LBKT       &kp N1        &kp N2        &kp N3                &kp N4          &kp N5                                                                                                           &kp N6    &kp N7       &kp N8          &kp N9        &kp N0         &kp RBKT
+            &kp BSLH       &kp B         &kp Y         &kp LC(BACKSPACE)     &kp LC(DELETE)  &kp SQT                                                                                                          &kp SEMI  &kp LC(LEFT) &kp UP          &kp LC(RIGHT) &none          &none
+            &kp EQUAL      &kp C         &kp I         &kp BACKSPACE         &kp DELETE      &kp COMMA                                                                                                        &kp HOME  &kp LEFT     &kp DOWN        &kp RIGHT     &kp END        &none 
+            &kp GRAVE      &kp G         &kp X         &kp LC(C)             &kp K           &kp MINUS   &smart_shft       &smart_ctrl     &smart_alt    &smart_alt      &smart_ctrl     &smart_shft          &kp FSLH  &kp R        &kp M           &kp F         &kp P          &kp LGUI
+            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT              &kp RIGHT                   &to 0             &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &to 0                          &kp UP       &kp DOWN        &kp PAGE_UP   &kp PAGE_DOWN  &kp F12
             >;
         };
 
