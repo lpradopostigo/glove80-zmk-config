@@ -131,7 +131,7 @@
             &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L        &kp D       &kp W        &kp V          &kp Z
             &kp EQUAL      &kp C         &kp I         &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H        &kp T       &kp S        &kp N          &kp Q
             &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &smart_shft       &smart_ctrl     &smart_alt    &smart_alt      &smart_ctrl     &smart_shft          &kp FSLH  &kp R        &kp M       &kp F        &kp P          &kp LGUI
-            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT    &kp RIGHT               &to 1             &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &kp SPACE                      &kp UP       &kp DOWN    &kp PAGE_UP  &kp PAGE_DOWN  &kp F12
+            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL   &sk LSHFT               &to 1             &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &kp SPACE                      &sk LSHFT    &sk LCTRL   &sk LALT     &sk LGUI       &kp F12
             >;
         };
 
