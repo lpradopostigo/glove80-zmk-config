@@ -74,11 +74,18 @@
             keep-mods = <(MOD_LALT|MOD_LSFT)>;
         };
 
-        dts: dual_shift {
+        backspace: backspace {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&sk LSHFT>;
+            bindings = <&kp BACKSPACE>, <&sk LSHFT>;
+        };
+
+        space: space {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SPACE>, <&sk LSHFT>;
         };
     };
 
@@ -138,7 +145,7 @@
             &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L        &kp D       &kp W        &kp V          &kp Z
             &kp EQUAL      &kp C         &kp I         &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H        &kp T       &kp S        &kp N          &kp Q
             &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &smart_shft       &smart_ctrl     &smart_alt    &smart_alt      &smart_ctrl     &smart_shft          &kp FSLH  &kp R        &kp M       &kp F        &kp P          &kp LGUI
-            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT    &kp RIGHT               &dts BSPC         &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &dts SPACE                     &kp UP       &kp DOWN    &kp PAGE_UP  &kp PAGE_DOWN  &kp F12
+            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT    &kp RIGHT               &backspace        &kp ESCAPE      &kp DEL       &kp TAB         &kp ENTER       &space                         &kp UP       &kp DOWN    &kp PAGE_UP  &kp PAGE_DOWN  &kp F12
             >;
         };
 
