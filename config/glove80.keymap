@@ -49,30 +49,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&sk>;
         };
-
-        smart_shft: smart_shft {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ssk LSHFT LSHFT>, <&ssk LC(LSHFT) LC(LSHFT)>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_LCTL)>;
-        };
-
-        smart_ctrl: smart_ctrl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ssk LCTRL LCTRL>, <&ssk LC(LALT) LC(LALT)>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT)>;
-        };
-
-        smart_alt: smart_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ssk LALT LALT>, <&ssk LA(LSHFT) LA(LSHFT)>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT|MOD_LSFT)>;
-        };
     };
 
     macros {
@@ -126,12 +102,12 @@
 
         default_layer {
             bindings = <
-            &kp LC(Y)      &kp LC(Z)     &kp LC(X)     &kp LC(C)   &kp LC(V)                                                                                                                              &kp LG(S)    &key_repeat &kp CAPSLOCK &kp F9         &kp F10
-            &kp LBKT       &kp N1        &kp N2        &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7       &kp N8      &kp N9       &kp N0         &kp RBKT
-            &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L        &kp D       &kp W        &kp V          &kp Z
-            &kp EQUAL      &kp C         &kp I         &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H        &kp T       &kp S        &kp N          &kp Q
-            &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R        &kp M       &kp F        &kp P          &kp LGUI
-            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL   &sk LSHFT               &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT    &sk LCTRL   &sk LALT     &sk LGUI       &kp F12
+            &kp LC(Y)      &kp LC(Z)     &kp LC(X)     &kp LC(C)   &kp LC(V)                                                                                                                              &kp LC(LS(TAB))    &kp LC(TAB) &kp LC(W)    &kp LC(LS(T))  &kp F10
+            &kp LBKT       &kp N1        &kp N2        &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7             &kp N8      &kp N9       &kp N0         &kp RBKT
+            &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D       &kp W        &kp V          &kp Z
+            &kp EQUAL      &kp C         &kp I         &kp E       &kp A       &kp COMMA                                                                                                        &kp DOT   &kp H              &kp T       &kp S        &kp N          &kp Q
+            &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M       &kp F        &kp P          &kp CAPSLOCK
+            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL   &sk LSHFT               &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL   &sk LALT     &sk LGUI       &kp F12
             >;
         };
 
