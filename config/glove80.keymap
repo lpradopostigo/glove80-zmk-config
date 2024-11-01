@@ -19,6 +19,27 @@
 #define MAGIC 2
 #define FACTORY_TEST 3
 
+// custom macros
+#define LEFT_HAND_KEYS      \
+         0  1  2  3  4      \
+        10 11 12 13 14 15   \
+        22 23 24 25 26 27   \
+        34 35 36 37 38 39   \
+        46 47 48 49 50 51   \
+        64 65 66 67 68
+#define RIGHT_HAND_KEYS     \
+            5  6  7  8  9   \
+        16 17 18 19 20 21   \
+        28 29 30 31 32 33   \
+        40 41 42 43 44 45   \
+        58 59 60 61 62 63   \
+           75 76 77 78 79
+#define THUMB_KEYS          \
+        69 52       57 74   \
+         70 53     56 73    \
+          71 54   55 72
+
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -42,9 +63,23 @@
 
         // custom   
 
-        hrm: home_row_mod {
+        lhm: left_home_mod {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <170>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <100>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        rhm: right_home_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <170>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <100>;
@@ -105,12 +140,12 @@
 
         default_layer {
             bindings = <
-            &kp LA(TAB)    &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)                                                                                                                              &kp LC(LS(TAB))    &kp LC(TAB) &kp LC(W)    &kp LC(LS(T))  &kp LG(TAB)
-            &kp LBKT       &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8      &kp N9       &kp N0         &kp RBKT
-            &kp BSLH       &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D       &kp W        &kp V          &kp Z
-            &kp EQUAL      &hrm LALT C   &hrm LGUI I   &hrm LSFT E   &hrm LCTRL A &kp COMMA                                                                                                        &kp DOT   &hrm LCTRL H       &hrm LSFT T &hrm LGUI S  &hrm LALT N    &kp Q
-            &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M       &kp F        &kp P          &kp CAPSLOCK
-            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL   &sk LALT     &sk LGUI       &kp F12
+            &kp LA(TAB)    &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)                                                                                                                               &kp LC(LS(TAB))    &kp LC(TAB)  &kp LC(W)    &kp LC(LS(T))  &kp LG(TAB)
+            &kp LBKT       &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8       &kp N9       &kp N0         &kp RBKT
+            &kp BSLH       &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D        &kp W        &kp V          &kp Z
+            &kp EQUAL      &lhm LGUI C   &lhm LALT I   &lhm LCTRL E  &lhm LSHFT A &kp COMMA                                                                                                        &kp DOT   &rhm LSHFT H       &rhm LCTRL T &rhm LALT S  &rhm LGUI N    &kp Q
+            &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M        &kp F        &kp P          &kp CAPSLOCK
+            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL    &sk LALT     &sk LGUI       &kp F12
             >;
         };
 
