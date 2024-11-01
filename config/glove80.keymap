@@ -86,7 +86,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         lhr: left_homey_ring {
             compatible = "zmk,behavior-hold-tap";
@@ -98,7 +98,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         lhm: left_homey_middy {
             compatible = "zmk,behavior-hold-tap";
@@ -110,7 +110,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         
         lhi: left_homey_index {
@@ -123,7 +123,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         rhp: right_homey_pinky {
             compatible = "zmk,behavior-hold-tap";
@@ -135,7 +135,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         rhr: right_homey_ring {
             compatible = "zmk,behavior-hold-tap";
@@ -147,7 +147,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         rhm: right_homey_middy {
             compatible = "zmk,behavior-hold-tap";
@@ -159,7 +159,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         rhi: right_homey_index {
             compatible = "zmk,behavior-hold-tap";
@@ -171,7 +171,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
     };
 
