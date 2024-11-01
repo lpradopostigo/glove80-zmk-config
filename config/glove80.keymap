@@ -68,7 +68,7 @@
             flavor = "tap-preferred";   
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <170>;
+            tapping-term-ms = <240>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <100>;
             #binding-cells = <2>;
@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";   
             hold-trigger-key-positions = <38>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <240>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <100>;
             #binding-cells = <2>;
