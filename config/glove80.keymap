@@ -105,12 +105,12 @@
 
         default_layer {
             bindings = <
-            &kp LA(TAB)    &kp LC(Z)     &kp LC(X)     &kp LC(C)   &kp LC(V)                                                                                                                              &kp LC(LS(TAB))    &kp LC(TAB) &kp LC(W)    &kp LC(LS(T))  &kp LG(TAB)
-            &kp LBKT       &kp N1        &kp N2        &kp N3      &kp N4      &kp N5                                                                                                           &kp N6    &kp N7             &kp N8      &kp N9       &kp N0         &kp RBKT
-            &kp BSLH       &kp B         &kp Y         &kp O       &kp U       &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D       &kp W        &kp V          &kp Z
-            &kp EQUAL      &kp C         &kp I         &kp E       &hrm LSFT A &kp COMMA                                                                                                        &kp DOT   &hrm LSFT H        &kp T       &kp S        &kp N          &kp Q
-            &kp GRAVE      &kp G         &kp X         &kp J       &kp K       &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M       &kp F        &kp P          &kp CAPSLOCK
-            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL   &sk LSHFT               &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL   &sk LALT     &sk LGUI       &kp F12
+            &kp LA(TAB)    &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)                                                                                                                              &kp LC(LS(TAB))    &kp LC(TAB) &kp LC(W)    &kp LC(LS(T))  &kp LG(TAB)
+            &kp LBKT       &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8      &kp N9       &kp N0         &kp RBKT
+            &kp BSLH       &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D       &kp W        &kp V          &kp Z
+            &kp EQUAL      &hrm LALT C   &hrm LGUI I   &hrm LSFT E   &hrm LCTRL A &kp COMMA                                                                                                        &kp DOT   &hrm LCTRL H       &hrm LSFT T &hrm LGUI S  &hrm LALT N    &kp Q
+            &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M       &kp F        &kp P          &kp CAPSLOCK
+            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL   &sk LALT     &sk LGUI       &kp F12
             >;
         };
 
