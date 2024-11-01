@@ -230,8 +230,8 @@
             &kp LBKT       &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8       &kp N9       &kp N0         &kp RBKT
             &kp BSLH       &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D        &kp W        &kp V          &kp Z
             &kp EQUAL      &lhp LGUI C   &lhr LALT I   &lhm LCTRL E  &lhi LSHFT A &kp COMMA                                                                                                        &kp DOT   &rhi LSHFT H       &rhm LCTRL T &rhr LALT S  &rhp LGUI N    &kp Q
-            &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M        &kp F        &kp P          &kp CAPSLOCK
-            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT      &kp RIGHT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &kp UP             &kp DOWN     &kp PG_UP    &kp PG_DN      &kp F12
+            &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp ENTER        &kp FSLH  &kp R              &kp M        &kp F        &kp P          &kp CAPSLOCK
+            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT      &kp RIGHT                &kp BACKSPACE     &kp DEL         &kp HOME       &tog 4            &kp TAB          &kp SPACE                  &kp UP             &kp DOWN     &kp PG_UP    &kp PG_DN      &kp F12
             >;
         };
 
@@ -265,6 +265,17 @@
             &kp N3   &kp N9   &kp N5   &kp N1   &kp N7   &kp N2                                                            &kp N2   &kp N7   &kp N1   &kp N5   &kp N9   &kp N3
             &kp N4   &kp N0   &kp N6   &kp N2   &kp N8   &kp N3   &kp N4   &kp N5   &kp N6      &kp N6   &kp N5   &kp N4   &kp N3   &kp N8   &kp N2   &kp N6   &kp N0   &kp N4
             &kp N5   &kp N1   &kp N7   &kp N3   &kp N9            &kp N7   &kp N8   &kp N9      &kp N9   &kp N8   &kp N7            &kp N9   &kp N3   &kp N7   &kp N1   &kp N5
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+            &trans     &trans      &trans  &trans  &trans                                                                                                       &trans  &trans     &trans     &trans    &trans
+            &trans     &trans      &trans  &trans  &trans   &trans                                                                                      &trans  &trans  &trans     &trans     &trans    &trans
+            &kp MINUS  &kp GRAVE   &kp B   &kp N   &kp M    &kp SQT                                                                                     &kp B   &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH
+            &kp T      &kp TAB     &kp Q   &kp W   &kp E    &kp R                                                                                       &kp T   &kp Y   &kp U      &kp I      &kp O     &kp P
+            &kp G      &kp LSHFT   &kp A   &kp S   &kp D    &kp F    &kp ESC    &kp RET     &kp PAUSE_BREAK     &kp BSPC   &kp DEL  &trans              &kp G   &kp H   &kp J      &kp K      &kp L     &kp SEMI
+            &kp V      &kp LCTRL   &kp Z   &kp X   &kp C             &kp SPACE  &kp LALT    &kp LGUI            &trans     &trans   &trans                      &trans  &trans     &trans     &trans    &trans
             >;
         };
     };
