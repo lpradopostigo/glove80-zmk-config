@@ -27,6 +27,7 @@
         34 35 36 37 38 39   \
         46 47 48 49 50 51   \
         64 65 66 67 68
+
 #define RIGHT_HAND_KEYS     \
             5  6  7  8  9   \
         16 17 18 19 20 21   \
@@ -34,10 +35,22 @@
         40 41 42 43 44 45   \
         58 59 60 61 62 63   \
            75 76 77 78 79
+           
 #define THUMB_KEYS          \
         69 52       57 74   \
          70 53     56 73    \
           71 54   55 72
+
+#define TAPPING_RESOLUTION 150
+
+#define HOMEY_HOLDING_TIME (TAPPING_RESOLUTION + 90)
+#define HOMEY_REPEAT_DECAY (TAPPING_RESOLUTION + 150)
+#define HOMEY_STREAK_DECAY TAPPING_RESOLUTION
+
+#define INDEX_HOLDING_TIME (TAPPING_RESOLUTION + 20)
+#define MIDDY_HOLDING_TIME (TAPPING_RESOLUTION + 60)
+#define RING_HOLDING_TIME (TAPPING_RESOLUTION + 90)
+#define PINKY_HOLDING_TIME (TAPPING_RESOLUTION + 110)
 
 
 / {
@@ -63,29 +76,102 @@
 
         // custom   
 
-        lhm: left_home_mod {
+        lhp: left_homey_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";   
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <240>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <100>;
+            tapping-term-ms = <PINKY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        };
+        }
 
-        rhm: right_home_mod {
+        lhr: left_homey_ring {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <RING_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        }
+
+        lhm: left_homey_middy {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <MIDDY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        }
+
+        
+        lhi: left_homey_index {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <INDEX_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        }
+
+        rhp: right_homey_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";   
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <240>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <100>;
+            tapping-term-ms = <PINKY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-        };
+        }
+
+        rhr: right_homey_ring {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <RING_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        }
+
+        rhm: right_homey_middy {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <MIDDY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        }
+
+        rhi: right_homey_index {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";   
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <INDEX_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        }
 
     };
 
@@ -143,7 +229,7 @@
             &kp LA(TAB)    &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)                                                                                                                               &kp LC(LS(TAB))    &kp LC(TAB)  &kp LC(W)    &kp LC(LS(T))  &kp LG(TAB)
             &kp LBKT       &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8       &kp N9       &kp N0         &kp RBKT
             &kp BSLH       &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D        &kp W        &kp V          &kp Z
-            &kp EQUAL      &lhm LGUI C   &lhm LALT I   &lhm LCTRL E  &lhm LSHFT A &kp COMMA                                                                                                        &kp DOT   &rhm LSHFT H       &rhm LCTRL T &rhm LALT S  &rhm LGUI N    &kp Q
+            &kp EQUAL      &lhp LGUI C   &lhr LALT I   &lhm LCTRL E  &lhi LSHFT A &kp COMMA                                                                                                        &kp DOT   &rhi LSHFT H       &rhm LCTRL T &rhr LALT S  &rhp LGUI N    &kp Q
             &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M        &kp F        &kp P          &kp CAPSLOCK
             &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL    &sk LALT     &sk LGUI       &kp F12
             >;
