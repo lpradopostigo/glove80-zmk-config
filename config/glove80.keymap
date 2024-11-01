@@ -231,7 +231,7 @@
             &kp BSLH       &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D        &kp W        &kp V          &kp Z
             &kp EQUAL      &lhp LGUI C   &lhr LALT I   &lhm LCTRL E  &lhi LSHFT A &kp COMMA                                                                                                        &kp DOT   &rhi LSHFT H       &rhm LCTRL T &rhr LALT S  &rhp LGUI N    &kp Q
             &kp GRAVE      &kp G         &kp X         &kp J         &kp K        &kp MINUS   &kp ESC           &kp LEFT        &kp RIGHT      &kp UP            &kp DOWN         &kp TAB          &kp FSLH  &kp R              &kp M        &kp F        &kp P          &kp CAPSLOCK
-            &magic MAGIC 0 &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &sk LSHFT          &sk LCTRL    &sk LALT     &sk LGUI       &kp F12
+            &magic MAGIC 0 &kp HOME      &kp END       &kp LEFT      &kp RIGHT                &kp BACKSPACE     &kp DEL         &kp HOME       &kp END           &kp ENTER        &kp SPACE                  &kp UP             &kp DOWN     &kp PG_UP    &kp PG_DN      &kp F12
             >;
         };
 
