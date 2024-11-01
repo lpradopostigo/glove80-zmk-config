@@ -79,7 +79,6 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";   
             hold-trigger-key-positions = <38>;
-            hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <170>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <100>;
