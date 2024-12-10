@@ -96,7 +96,7 @@
         default_layer {
             bindings = <
             &kp LA(TAB)    &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)                                                                                                                               &kp LC(LS(TAB))    &kp LC(TAB)  &kp LC(W)    &kp LC(LS(T))  &kp LG(TAB)
-            &to GAMING     &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8       &kp N9       &kp N0         &none
+            &tog GAMING    &kp N1        &kp N2        &kp N3        &kp N4       &kp N5                                                                                                           &kp N6    &kp N7             &kp N8       &kp N9       &kp N0         &none
             &kp CAPSLOCK   &kp B         &kp Y         &kp O         &kp U        &kp SQT                                                                                                          &kp SEMI  &kp L              &kp D        &kp W        &kp V          &kp Z
             &kp EQUAL      &kp C         &kp I         &kp E         &kp A        &kp COMMA                                                                                                        &kp DOT   &kp H              &kp T        &kp S        &kp N          &kp Q
             &sk LALT       &kp G         &kp X         &kp J         &kp K        &kp MINUS   &sk LSHFT           &sk LCTRL       &kp LG(S)     &kp LG(S)         &sk RCTRL      &sk RSHFT         &kp FSLH  &kp R              &kp M        &kp F        &kp P          &sk LALT
